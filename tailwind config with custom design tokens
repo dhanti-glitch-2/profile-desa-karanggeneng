@@ -1,0 +1,51 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./data/**/*.{ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // Palette diambil dari suasana Desa Karanggeneng:
+        // gapura kayu-hitam, hutan jati, sawah, bendera merah-kuning-hijau
+        husk: "#EFE6D0", // dasar kertas jerami, latar utama
+        paper: "#F8F4E7", // kartu/permukaan lebih terang
+        ink: "#241C14", // teks utama, kayu jati tua / gapura hitam
+        forest: {
+          DEFAULT: "#3F5B34", // daun jati tua
+          light: "#6C8C4C", // padi muda
+          dark: "#26391F",
+        },
+        clay: {
+          DEFAULT: "#B4502E", // atap/gerobak merah bata
+          light: "#D97A4F",
+          dark: "#7C371F",
+        },
+        gold: {
+          DEFAULT: "#C99A2E", // bendera kuning, gabah kering
+          light: "#E4BE63",
+        },
+        night: "#17130D", // nav/footer gelap, kayu terbakar
+      },
+      fontFamily: {
+        display: ["var(--font-display)"],
+        body: ["var(--font-body)"],
+        mono: ["var(--font-mono)"],
+      },
+      backgroundImage: {
+        "grain": "url('/images/grain.png')",
+      },
+      maxWidth: {
+        content: "1180px",
+      },
+      boxShadow: {
+        card: "0 18px 40px -20px rgba(23, 19, 13, 0.35)",
+      },
+    },
+  },
+  plugins: [],
+};
+export default config;
